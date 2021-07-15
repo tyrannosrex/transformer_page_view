@@ -1,4 +1,4 @@
-import 'package:example/buildin_transformers.dart';
+import 'buildin_transformers.dart';
 import 'package:flutter/material.dart';
 
 import 'package:transformer_page_view/transformer_page_view.dart';
@@ -31,9 +31,9 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key? key, this.title}) : super(key: key);
 
-  final String title;
+  final String? title;
 
   @override
   _MyHomePageState createState() => new _MyHomePageState();
@@ -42,11 +42,7 @@ class MyHomePage extends StatefulWidget {
 class TestWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    List<Color> list = [
-      Colors.redAccent,
-      Colors.blueAccent,
-      Colors.greenAccent
-    ];
+    List<Color> list = [Colors.redAccent, Colors.blueAccent, Colors.greenAccent];
     return new TransformerPageView(
         loop: true,
         transformer: new DeepthPageTransformer(),

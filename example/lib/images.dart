@@ -24,9 +24,9 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key? key, this.title}) : super(key: key);
 
-  final String title;
+  final String? title;
 
   @override
   _MyHomePageState createState() => new _MyHomePageState();
@@ -55,8 +55,8 @@ class ImageTest extends StatelessWidget {
                 fit: StackFit.expand,
                 children: <Widget>[
                   new ParallaxImage.asset(
-                    images[info.index],
-                    position: info.position,
+                    images[info.index!],
+                    position: info.position!,
                   ),
                   new DecoratedBox(
                     decoration: new BoxDecoration(
@@ -77,19 +77,19 @@ class ImageTest extends StatelessWidget {
                       children: <Widget>[
                         new ParallaxContainer(
                           child: new Text(
-                            text0[info.index],
+                            text0[info.index!],
                             style: new TextStyle(fontSize: 15.0),
                           ),
-                          position: info.position,
+                          position: info.position!,
                           translationFactor: 300.0,
                         ),
                         new SizedBox(
                           height: 8.0,
                         ),
                         new ParallaxContainer(
-                          child: new Text(text1[info.index],
+                          child: new Text(text1[info.index!],
                               style: new TextStyle(fontSize: 18.0)),
-                          position: info.position,
+                          position: info.position!,
                           translationFactor: 200.0,
                         ),
                       ],
